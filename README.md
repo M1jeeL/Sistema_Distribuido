@@ -1,5 +1,6 @@
 # Sistema-Distribuido
-Este es un proyecto de WebSocket creado en NodeJs, creando un servidor con Express y Socket.io, el cual recibe datos desde sensores creados con NodeJs (TCP), Python (UDP) y Arduino (Serial), aplicando también el protocolo RPC
+Este es un proyecto de WebSocket creado en NodeJs, creando un servidor con Express y Socket.io, el cual recibe datos desde sensores artificiales creados con NodeJs (TCP) y Python (UDP), además de un sensor físico con Arduino Uno (Serial), aplicando también el protocolo RPC
+Estos datos son guardados en una base de datos en MongoDB, utilizando el ORM mongoose para facilitar las operaciones con la base de datos.
 
 ### Para iniciar el proyecto debemos instalar los modulos de node, para esto abrir una terminal y escribir lo siguiente:
 
@@ -9,7 +10,7 @@ Este es un proyecto de WebSocket creado en NodeJs, creando un servidor con Expre
 
 ### Para poder iniciar el servidor primero debemos activar el Sensor UDP con el siguiente comando:
 
-<code>py sensorudp.py</code>
+<code>py sensor_udp.py</code>
 
 ### Se nos abrirá una ventana la cual solo debemos presionar Activar y el sensor enviará datos
 

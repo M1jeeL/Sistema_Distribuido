@@ -10,7 +10,7 @@ Estos datos son guardados en una base de datos en MongoDB, utilizando el ORM mon
 
 ### Para poder iniciar el servidor primero debemos activar el Sensor UDP con el siguiente comando:
 
-<code>py sensorudp.py</code>
+<code>py sensor_udp.py</code>
 
 ### Se nos abrirá una ventana la cual solo debemos presionar Activar y el sensor enviará datos
 

@@ -3,7 +3,7 @@ function tiempo_real() {
   var socket = io();
 
   // Se escucha mediante Websocket el evento "sensor_temperatura"
-  socket.on("data_rpc", function (data) {
+  socket.on("sensor_presion", function (data) {
     // Se genera el manómetro de Google Charts
     google.charts.load("current", { packages: ["gauge"] });
     google.charts.setOnLoadCallback(drawChart);

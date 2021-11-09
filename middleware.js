@@ -73,10 +73,10 @@ enchufe_tcp.connect(3000, "192.168.1.3");
 // Escucha mediante protocolo TCP
 enchufe_tcp.on("data", (data) => {
   data = data.toString();
-  console.log("sensor temperatura: " + data);
+  console.log("sensor presion: " + data);
 
   // Se envía el dato mediante WebSocket
-  io.emit("sensor_temperatura", data);
+  //   io.emit("sensor_temperatura", data);
 
   // Conexión RPC
   setTimeout(() => {
@@ -90,7 +90,8 @@ enchufe_tcp.on("data", (data) => {
     // Mediante RPC se llama a la función "amplificar", para luego mostrar por consola el valor recibido
     cliente.methodCall("amplificar", [data_rpc], function (error, value) {
       console.log(`respuesta: ${value}`);
-      io.emit("data_rpc", value);
+      // Se envía mediante WebSocket la respuesta de la aplicación conectada vía rpc
+      io.emit("sensor_presion", value);
     });
   }, 2000);
 
